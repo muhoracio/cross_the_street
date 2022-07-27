@@ -194,7 +194,7 @@ function updateRecord(value) {
 // Function to change level
 function verifyLevel() {
   const level = document.querySelector(".levels input:checked");
-  if (level) userData.level = level.value || "01";
+  userData.level = level.value;
 
   const levels = document.querySelectorAll(".levels input");
   levels.forEach((input) => {
