@@ -6,6 +6,8 @@ let speed = 300;
 const movementFunctions = {
   ArrowUp() {
     const frog = container.querySelector(".frog");
+    if (!frog) return;
+
     const activeRow = frog.parentElement;
 
     if (activeRow.classList.contains("last-row")) return;
@@ -31,6 +33,8 @@ const movementFunctions = {
   },
   ArrowDown() {
     const frog = container.querySelector(".frog");
+    if (!frog) return;
+
     const activeRow = frog.parentElement;
 
     if (activeRow.classList.contains("first-row")) return;
@@ -43,6 +47,8 @@ const movementFunctions = {
   },
   ArrowLeft() {
     const frog = container.querySelector(".frog");
+    if (!frog) return;
+
     const frogPos = Number(getComputedStyle(frog).gridColumnStart);
 
     if (frogPos === 1) return;
@@ -51,6 +57,8 @@ const movementFunctions = {
   },
   ArrowRight() {
     const frog = container.querySelector(".frog");
+    if (!frog) return;
+
     const frogPos = Number(getComputedStyle(frog).gridColumnStart);
 
     if (frogPos === 11) return;
