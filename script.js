@@ -103,23 +103,20 @@ function createCar() {
   car.classList.add("car");
   car.style.gridColumnStart = 11;
 
-  movingCar(car, randomStreet);
-  randomStreet.appendChild(car);
-}
-
-// Moving a car
-function movingCar(car, street) {
+  // Moving a car
   const carEngine = setInterval(() => {
     const carPos = Number(car.style.gridColumnStart);
 
     if (carPos === 1) {
-      street.removeChild(car);
+      randomStreet.removeChild(car);
       return clearInterval(carEngine);
     }
 
     car.style.gridColumnStart = carPos - 1;
   }, speed);
   gameEngines.push(carEngine);
+
+  randomStreet.appendChild(car);
 }
 
 // Function to Stop Game
