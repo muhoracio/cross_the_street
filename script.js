@@ -215,10 +215,8 @@ function changeLevel(level) {
 function restoreLevel(level) {
   const items = document.querySelectorAll(".levels input");
   items.forEach((input) => {
-    input.checked = false;
+    if (input.value !== level) return (input.checked = false);
+    input.checked = true;
+    changeLevel(input.value);
   });
-
-  const selectedLevel = [...items].filter((item) => item.value === level);
-  selectedLevel[0].checked = true;
-  changeLevel(selectedLevel[0].value);
 }
