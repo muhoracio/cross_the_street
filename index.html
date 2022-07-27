@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <script src="./script.js" defer></script>
+  <title>Frog Game</title>
+</head>
+
+<body>
+  <div class="game-options">
+    <div class="scoreboard">
+      <p id="score">00</p>
+      <p class="record">Record <span>00</span></p>
+    </div>
+
+    <div class="levels">
+      <label for="01">
+        01
+        <input type="radio" name="level" id="01" value="01">
+      </label>
+      <label for="02">
+        02
+        <input type="radio" name="level" id="02" value="02">
+      </label>
+      <label for="03">
+        03
+        <input type="radio" name="level" id="03" value="03">
+      </label>
+    </div>
+  </div>
+  <div class="container">
+    <div class="first-row row">
+      <div class="frog"></div>
+    </div>
+    <div class="row-1 row street"></div>
+    <div class="row-2 row street"></div>
+    <div class="row-3 row street"></div>
+    <div class="row-4 row street"></div>
+    <div class="row-5 row street"></div>
+    <div class="row-6 row street"></div>
+    <div class="row-7 row street"></div>
+    <div class="last-row row"></div>
+
+    <div class="game-over-modal">
+      <button class="restart">Recomeçar</button>
+    </div>
+  </div>
+</body>
+
+</html>
